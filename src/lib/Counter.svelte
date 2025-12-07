@@ -1,3 +1,9 @@
+<svelte:options customElement={{
+  tag: "counter-test",
+  //shadow: "open" // allow access to the shadow DOM
+  shadow: "none"
+}} />
+
 <script lang="ts">
   let count: number = $state(0)
   const increment = () => {
@@ -5,6 +11,12 @@
   }
 </script>
 
-<button onclick={increment}>
+<button onclick={increment} class="bg-blue-500 hover:bg-blue-700 text-white">
   count is {count}
 </button>
+
+<style>
+  /* TODO: make this work */
+  /* import the tailwindcss style in the component */
+  @import 'tailwindcss';
+</style>
