@@ -4,10 +4,12 @@ import App from './App.svelte'
 
 import Counter from './lib/Counter.svelte'
 
-//customElements.define('counter-test', Counter)
 
-/*const app = mount(App, {
+
+// comment this to disable the svelte app and only leave web components
+// the vite autoreload is useful for development though
+const app = mount(App, {
   target: document.getElementById('app')!,
-})*/
+})
 
-//export default app
+export default app
