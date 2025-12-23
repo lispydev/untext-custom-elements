@@ -2,9 +2,11 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
+  import Palette from './lib/Palette.svelte'
 </script>
 
 <main>
+  <Palette items={["a","aa", "b", "c"]} onselect={alert} />
   <div>
     <a href="https://vite.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
