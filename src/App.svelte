@@ -3,10 +3,14 @@
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
   import Palette from './lib/Palette.svelte'
+  import PaletteShow from './lib/PaletteShow.svelte';
+
+  let palette: PaletteShow
 </script>
 
 <main>
-  <Palette items={["a","aa", "b", "c"]} onselect={alert} />
+  <PaletteShow bind:this={palette} choices={["a","aa", "b", "c"]} onselect={alert} />
+  <button on:click={() => palette.showPalette()}>show</button>
   <div>
     <a href="https://vite.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
