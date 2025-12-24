@@ -41,6 +41,10 @@
     }
   }
 
+  export function update() {
+    filterItems()
+  }
+
 </script>
 
 <div class="flex w-full justify-center">
